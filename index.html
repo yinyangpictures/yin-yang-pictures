@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Yin Yang Pictures</title>
+  <meta name="description" content="Yin Yang Pictures — film & content production." />
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -11,36 +12,124 @@
 
 <header class="header">
   <div class="container header-inner">
-    <a class="logo" href="#">YIN YANG PICTURES</a>
+    <a class="logo" href="./">YIN YANG PICTURES</a>
 
     <nav class="nav">
-      <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Work</a>
-      <a href="#">Contact</a>
+      <a href="./about/">About</a>
+      <a href="./services/">Services</a>
+      <a href="./work/commercials/">Work</a>
+      <a href="./contact/">Contact</a>
     </nav>
+
+    <button class="menuBtn" id="menuBtn" aria-expanded="false" aria-controls="menu">
+      Open Menu
+    </button>
   </div>
 </header>
 
-<section class="hero container">
-  <p class="kicker">SCROLL FOR MORE</p>
-  <h1>We are a creative studio.</h1>
-  <p class="lead">
-    Yin Yang Pictures crafts calm, confident storytelling —
-    from concept to delivery.
-  </p>
-  <p class="cta">
-    <a href="#">Let’s work together.</a>
-  </p>
-</section>
+<div class="menu" id="menu" hidden>
+  <div class="container menu-inner">
+    <div class="menu-top">
+      <a class="logo" href="./">YIN YANG PICTURES</a>
+      <button class="menuBtn" id="closeBtn">Close Menu</button>
+    </div>
+
+    <div class="menu-links">
+      <a href="./">Home</a>
+      <a href="./about/">About</a>
+      <a href="./services/">Services</a>
+      <a href="./work/commercials/">Commercials</a>
+      <a href="./work/music-videos/">Music Videos</a>
+      <a href="./work/shorts-docs/">Shorts & Docs</a>
+      <a href="./work/stills/">Stills</a>
+      <a href="./contact/">Contact</a>
+    </div>
+
+    <div class="menu-social">
+      <a href="#" target="_blank" rel="noreferrer">Instagram</a>
+      <a href="#" target="_blank" rel="noreferrer">Vimeo</a>
+      <a href="#" target="_blank" rel="noreferrer">LinkedIn</a>
+    </div>
+  </div>
+</div>
+
+<main>
+  <section class="hero container">
+    <p class="kicker">SCROLL FOR MORE</p>
+    <h1>We are a creative studio.</h1>
+    <p class="lead">
+      Yin Yang Pictures crafts calm, confident storytelling — from concept to delivery.
+    </p>
+    <p class="cta">
+      <a href="./contact/">Let’s work together.</a>
+    </p>
+  </section>
+
+  <section class="container section">
+    <div class="section-head">
+      <h2>Selected Work</h2>
+      <a class="smallLink" href="./work/commercials/">View all work</a>
+    </div>
+
+    <div class="grid">
+      <a class="card" href="./work/commercials/">
+        <div class="thumb" style="background-image:url('./assets/placeholder-1.jpg')"></div>
+        <div class="meta">
+          <div class="title">Project Title</div>
+          <div class="sub">Commercial</div>
+        </div>
+      </a>
+
+      <a class="card" href="./work/music-videos/">
+        <div class="thumb" style="background-image:url('./assets/placeholder-2.jpg')"></div>
+        <div class="meta">
+          <div class="title">Project Title</div>
+          <div class="sub">Music Video</div>
+        </div>
+      </a>
+
+      <a class="card" href="./work/shorts-docs/">
+        <div class="thumb" style="background-image:url('./assets/placeholder-3.jpg')"></div>
+        <div class="meta">
+          <div class="title">Project Title</div>
+          <div class="sub">Short / Doc</div>
+        </div>
+      </a>
+    </div>
+  </section>
+</main>
 
 <footer class="footer">
   <div class="container footer-inner">
     <p>© <span id="year"></span> Yin Yang Pictures. All Rights Reserved.</p>
+    <div class="footer-links">
+      <a href="./careers/">Careers</a>
+      <a href="./faqs/">FAQ’s</a>
+      <a href="./environmental-declaration/">Environmental Declaration</a>
+    </div>
   </div>
 </footer>
 
 <script>
+  const menu = document.getElementById("menu");
+  const menuBtn = document.getElementById("menuBtn");
+  const closeBtn = document.getElementById("closeBtn");
+
+  function openMenu() {
+    menu.hidden = false;
+    document.documentElement.style.overflow = "hidden";
+    menuBtn.setAttribute("aria-expanded", "true");
+  }
+  function closeMenuFn() {
+    menu.hidden = true;
+    document.documentElement.style.overflow = "";
+    menuBtn.setAttribute("aria-expanded", "false");
+  }
+
+  menuBtn.addEventListener("click", openMenu);
+  closeBtn.addEventListener("click", closeMenuFn);
+  window.addEventListener("keydown", (e) => e.key === "Escape" && closeMenuFn());
+
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
