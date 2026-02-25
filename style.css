@@ -1,0 +1,116 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  color: #111;
+  background: #fff;
+  line-height: 1.6;
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header */
+.header {
+  padding: 24px 0;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #111;
+  letter-spacing: -0.3px;
+}
+
+.nav a {
+  margin-left: 24px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #111;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero */
+.hero {
+  padding: 120px 0;
+}
+
+.kicker {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #777;
+  margin-bottom: 32px;
+}
+
+.hero h1 {
+  font-size: 56px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  margin-bottom: 24px;
+  max-width: 800px;
+}
+
+.lead {
+  font-size: 20px;
+  color: #555;
+  max-width: 700px;
+  margin-bottom: 40px;
+}
+
+.cta a {
+  font-size: 14px;
+  text-decoration: underline;
+  color: #111;
+}
+
+/* Footer */
+.footer {
+  padding: 60px 0;
+  border-top: 1px solid #eee;
+  margin-top: 120px;
+}
+
+.footer-inner {
+  font-size: 13px;
+  color: #777;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+  .hero {
+    padding: 80px 0;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .lead {
+    font-size: 18px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+}
