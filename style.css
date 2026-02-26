@@ -224,32 +224,3 @@ html, body {
   width: auto;
   display: block;
 }
-
-.brand-logos{
-  /* Reduce dead space above/below the logos */
-  margin: 18px auto 28px;
-  padding: 0 18px;
-  text-align: center;
-}
-
-.brand-logos img{
-  /* Never crop/zoom — always show the whole image */
-  display: block;
-  width: 100%;
-  height: auto;
-  max-width: 750px;     /* your desktop size */
-  object-fit: contain;  /* key line: prevents cropping */
-  margin: 0 auto;
-}
-
-/* On mobile, let it fill the screen nicely */
-@media (max-width: 800px){
-  .brand-logos{
-    margin: 14px auto 22px;
-    padding: 0 14px;
-  }
-
-  .brand-logos img{
-    max-width: 100%;
-  }
-}
