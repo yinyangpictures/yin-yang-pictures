@@ -214,3 +214,9 @@ html, body {
   inset: 0;            /* top/right/bottom/left: 0 */
   z-index: 900;        /* lower than header so header stays visible */
 }
+
+.logoImg {
+  height: 30px;       /* tweak if you want */
+  width: auto;
+  display: block;
+}
