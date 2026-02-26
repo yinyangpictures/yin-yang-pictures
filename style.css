@@ -202,3 +202,15 @@ html, body {
   width: auto;
   max-width: 100%;
 }
+
+/* Keep header (and logo) above the mobile menu overlay */
+.header {
+  position: relative;   /* ok even if you later set it to fixed */
+  z-index: 1000;
+}
+
+.menu {
+  position: fixed;
+  inset: 0;            /* top/right/bottom/left: 0 */
+  z-index: 900;        /* lower than header so header stays visible */
+}
