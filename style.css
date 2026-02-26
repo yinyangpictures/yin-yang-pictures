@@ -40,6 +40,10 @@ html, body {
   cursor: pointer;
 }
 
+.menuBtn .menuClose { display: none; }
+.menuBtn[aria-expanded="true"] .menuOpen { display: none; }
+.menuBtn[aria-expanded="true"] .menuClose { display: inline; }
+
 /* Hero */
 .hero { padding: 120px 0 80px; }
 .kicker { font-size: 12px; letter-spacing: 2px; color: #777; margin-bottom: 32px; }
