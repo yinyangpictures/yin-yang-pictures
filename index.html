@@ -103,7 +103,10 @@
     menuBtn.setAttribute("aria-expanded", "false");
   }
 
-  menuBtn.addEventListener("click", openMenu);
+  menuBtn.addEventListener("click", () => {
+  if (menu.hidden) openMenu();
+  else closeMenuFn();
+});
   closeBtn.addEventListener("click", closeMenuFn);
   window.addEventListener("keydown", (e) => e.key === "Escape" && closeMenuFn());
 
