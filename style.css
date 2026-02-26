@@ -192,8 +192,13 @@ html, body {
   z-index: 2;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+}
+
 .logo img {
   height: 40px;
   width: auto;
-  display: block;
+  max-width: 100%;
 }
